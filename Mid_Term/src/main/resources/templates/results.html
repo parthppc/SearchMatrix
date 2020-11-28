@@ -1,0 +1,79 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<style>
+body{
+	background-color: black;
+	color:white;
+	margin: 5%;
+}
+
+.div1 {				
+	float: left;
+	color: #FFF000;
+	border:2px solid #000000;
+	width: 40%;
+	padding-top:40px;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-bottom: 30px;
+	margin:10px;
+	border-radius: 40px 0px 40px 0px;
+	background-color: #323232;
+	box-shadow: inset 5px 5px 10px black;
+	font-size: 15pt;
+}
+	#div2{
+		color: red;
+		font-size: 20pt;
+		border-top: solid #070707;
+		padding: 10px;
+	}
+	
+	
+	.b {
+		border: solid;
+		text-decoration: none;
+		border-radius: 15px;
+		padding-left: 13px;
+		padding-right: 13px;
+	}
+	
+	.a:hover {
+  		color:#0867DE;
+    }
+	
+
+</style>
+
+<body>
+<h2>Note: <font style="color: red;">If the Pattern is found then the index of the location is starting from "ZERO" not from 1.</font></h2>
+
+
+
+<div id="div2">
+
+<table>
+<tr th:each="data:${datas}">
+	
+<td th:text="${data.sch}"></td>
+<td>:</td>
+<td th:text="${data.fn}"></td>
+</tr>
+</table>
+<br>
+<table>
+<tr>
+<td> 
+	<a href="/search" class="b"> Try again</a>
+</td>
+<td>  &nbsp; &nbsp; &nbsp;                 </td>
+<td>	
+	<a href="/over" class="b">Game over</a>
+</td>
+</tr>
+
+</table>
+	
+</div>
+
+</body>
+</html>
